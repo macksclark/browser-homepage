@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<html>
+   <head>
+         <meta charset="UTF-8">
+         <link rel="stylesheet" href="/static/welcome-template.css">
+
+         <!-- The welcome struct (shown in the main.go code) is received within the HTML and we just need to use the . operator and retrieve the information we want -->
+         <title>Hello!</title>
+   </head>
+   <body>
+      <div class="welcome center">Good {{.TimeOfDay}}, {{.Name}}</div>
+      <div>&nbsp</div>
+      <div>&nbsp</div>
+      <div class="event">Upcoming events (loaded {{.Time}}):</div>
+      <div class="table">
+         <table>
+            {{range .Events}}
+               <tr><td width="200">{{.Date}}</td>
+               <td width="600">{{.Summary}}</td>
+               </tr>
+            {{end}}
+         </table>
+      </div> 
+   </body>
+</html>
