@@ -1,4 +1,4 @@
-Go learning easy project
+Learning Golang - easy project
 
 To use:
 1. Clone repository, change line 162 of main.go to your name
